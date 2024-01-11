@@ -1,0 +1,171 @@
+body{
+    margin:0px;
+    padding: 0px;
+    background-image: url(img/background.jpeg);
+    background-size: 100%;
+
+}
+.container{
+    font-size: 6px;
+    width: 45em;
+    height: 45em;
+    position: relative;
+}
+.sun{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    height: 120px;
+    width: 120px;
+    background-image: url(img/sun.jpeg);
+    border-radius:50%;
+    background-size: cover;
+    position:absolute;
+    box-shadow: -4px 2px 56px #f9c05f;
+    left:100%;
+    top:90%;
+    transform: translate(-50%, -50%);
+    animation: orbit 100s linear infinite;
+}
+.mercury,.venus,.earth,.mars,.jupiter,.saturn,.uranus,.neptune{
+    position: absolute;
+    border-radius: 0.5em 0.5em 0 0;
+    border-radius: 50%;
+}
+
+.mercury{
+    top: 23em;
+    left: 23em;
+    width: 40em;
+    height: 40em;
+    animation: orbit 13s linear infinite;
+}
+.venus{
+    top: 20em;
+    left: 20em;
+    width: 50em;
+    height: 50em;
+    animation: orbit 20s linear infinite;
+}
+
+.earth{
+    top: 20em;
+    left: 20em;
+    width: 65em;
+    height: 45em;
+    animation: orbit 27s linear infinite;
+}
+.mars{
+    top: 15em;
+    left: 15em;
+    width: 75em;
+    height: 55em;
+    animation: orbit 34s linear infinite;
+}
+.jupiter{
+    top: 7em;
+    left: 7em;
+    width: 85em;
+    height: 65em;
+    animation: orbit 41s linear infinite;
+}
+.saturn{
+    top: 7em;
+    left: 7em;
+    width: 80em;
+    height: 60em;
+    animation: orbit 48s linear infinite;
+}
+.uranus{
+    top: 5em;
+    left: 5em;
+    width: 100em;
+    height: 85em;
+    animation: orbit 55s linear infinite;
+}
+.neptune{
+    top: 3em;
+    left: 3em;
+    width: 120em;
+    height: 95em;
+    animation: orbit 62s linear infinite;
+}
+
+
+.mercury::before,.venus::before,.earth::before,.mars::before,.jupiter::before,.saturn::before,.uranus::before,.neptune::before{
+    content: '';
+    position: absolute;
+    border-radius: 40%;
+    animation: orbit 40s linear infinite;
+}
+
+.mercury::before{
+    top: 1.5em;
+    right: 1.8em;
+    width: 6em;
+    height: 6em;
+    background-image: url(img/mercury.jpeg);
+    background-size:cover;
+}
+.venus::before{
+    top: 3em;
+    right: 3.5em;
+    width: 8em;
+    height: 8em;
+    background-image: url(img/venus.jpeg);
+    background-size:cover;
+}
+.earth::before{
+    top: 4em;
+    right: 4em;
+    width: 10em;
+    height: 10em;
+    background-image: url(img/earth.jpeg);
+    background-size:cover;
+}
+.mars::before{
+    top: 5em;
+    right: 5em;
+    width: 10em;
+    height: 10em;
+    background-image: url(img/mars.jpeg);
+    background-size:cover;
+}
+.jupiter::before{
+    top: 6em;
+    right: 6em;
+    width: 16em;
+    height: 16em;
+    background-image: url(img/jupiter.jpeg);
+    background-size:cover;
+}
+.saturn::before{
+    top: 2.5em;
+    right: 2.5em;
+    width: 17em;
+    height: 17em;
+    background-image: url(img/saturn.jpeg);
+    background-size:cover;
+}
+.uranus::before{
+    top: 2em;
+    right: 2em;
+    width: 10em;
+    height: 10em;
+    background-image: url(img/uranus.jpeg);
+    background-size:cover;
+}
+.neptune::before{
+    top: 2em;
+    right: 2em;
+    width: 15em;
+    height: 15em;
+    background-image: url(img/neptune.jpeg);
+    background-size:cover;
+}
+
+@keyframes orbit{
+to{
+    transform:rotate(360deg) 
+}
+}
